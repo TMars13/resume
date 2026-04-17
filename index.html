@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Богдан Федоров — Designer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg: #efefef;
+    --text: #1a1a1a;
+    --accent: #000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", sans-serif;
+}
+
+/* контейнер */
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* HERO */
+.hero {
+    margin-bottom: 100px;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
+}
+
+.name {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+/* сетка */
+.grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 100px;
+}
+
+/* адаптив */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
+
+/* секции */
+.section {
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.section:nth-child(2) { animation-delay: 0.2s; }
+.section:nth-child(3) { animation-delay: 0.4s; }
+.section:nth-child(4) { animation-delay: 0.6s; }
+
+/* заголовки */
+.title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 26px;
+    margin-bottom: 16px;
+}
+
+/* текст */
+p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* hover элементы */
+.item {
+    margin-bottom: 10px;
+    transition: all 0.25s ease;
+    cursor: default;
+}
+
+.item:hover {
+    transform: translateX(6px);
+    opacity: 0.7;
+}
+
+/* опыт */
+.job {
+    margin-bottom: 30px;
+    padding: 14px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.job:hover {
+    background: white;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.job-title {
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.job-date {
+    font-size: 14px;
+    opacity: 0.6;
+    margin-bottom: 8px;
+}
+
+/* контакты */
+.contacts p {
+    margin-bottom: 6px;
+    transition: 0.2s;
+}
+
+.contacts p:hover {
+    opacity: 0.6;
+}
+
+/* анимация */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="name">Богдан Федоров</div>
+        <div class="subtitle">Графический / цифровой дизайнер</div>
+    </div>
+
+    <div class="grid">
+
+        <!-- ЛЕВАЯ -->
+        <div>
+
+            <div class="section contacts">
+                <div class="title">Контакты</div>
+                <p class="item">bogdanfya@gmail.com</p>
+                <p class="item">+7 983 364 2999</p>
+            </div>
+
+            <div class="section">
+                <div class="title">Навыки</div>
+                <p class="item">UI/UX дизайн</p>
+                <p class="item">Графика 2D/3D</p>
+                <p class="item">Видео / звук</p>
+            </div>
+
+            <div class="section">
+                <div class="title">Инструменты</div>
+                <p class="item">Photoshop</p>
+                <p class="item">Illustrator</p>
+                <p class="item">Figma</p>
+                <p class="item">Premiere Pro</p>
+                <p class="item">Unity</p>
+            </div>
+
+        </div>
+
+        <!-- ПРАВАЯ -->
+        <div>
+
+            <div class="section">
+                <div class="title">Профиль</div>
+                <p>
+                    Дизайнер с более чем 8-летним опытом в цифровых продуктах,
+                    играх и медиа. Создаю визуальные решения, которые улучшают
+                    UX и повышают вовлеченность пользователей.
+                </p>
+            </div>
+
+            <div class="section">
+                <div class="title">Опыт</div>
+
+                <div class="job">
+                    <div class="job-title">Yandex — Контент специалист</div>
+                    <div class="job-date">2023 — сейчас</div>
+                    <p>Проверка 300–500+ объявлений ежедневно</p>
+                </div>
+
+                <div class="job">
+                    <div class="job-title">Антенна-Телеком</div>
+                    <div class="job-date">2015 — 2021</div>
+                    <p>Дизайн, контент, видео производство</p>
+                </div>
+
+                <div class="job">
+                    <div class="job-title">Game Dev Project</div>
+                    <div class="job-date">2017 — 2019</div>
+                    <p>2D ресурсы и концепт-арт</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
